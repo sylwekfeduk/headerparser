@@ -26,7 +26,7 @@ app.get('/api/hello', function (req, res) {
 
 app.get("/api/whoami", (req, res) => {
   res.json({
-    ipaddress: req.socket.remoteAddress.substring(7),
+    ipaddress: req.socket.remoteAddress,
     language: req.headers['accept-language'],
     software: req.headers['user-agent']
   })
